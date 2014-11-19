@@ -25,6 +25,6 @@ echo introduceCar($myCar)."\n";
 
 $raceCar = new RaceCar("Ferrari", "Enzo", "silver", 5, 100);
 
-echo $raceCar->getHP()."\n";
+echo $raceCar->getVMax()."\n";
 echo $raceCar->helloCar()."\n";
 ?>

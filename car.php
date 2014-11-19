@@ -54,27 +54,36 @@ class Car implements CarInterface{
 	}
 }
 
-
-class RaceCar extends Car implements RaceCarInterface, EngineInterface  {
+class Engine implements EngineInterface {
 	private $HorsePower;
 	
-	
-	public function RaceCar($b, $m, $c, $nod, $power) {     
-       parent::Car($b, $m, $c, $nod);
+	public function Engine($power) {     
 	   $this->HorsePower=$power;
     }
-
 	
-	public function getVMax(){
-		return $this->HorsePower*2+5;
-	}
-	
-	public function getAcceleration(){
-		return $this->HorsePower/2-5;
-	}
 	
 	public function getHP(){
 		return $this->HorsePower;
 	}
+}
+
+class RaceCar extends Car implements RaceCarInterface {
+	private $EnginePower;
+	
+	
+	public function RaceCar($b, $m, $c, $nod, $power) {     
+       parent::Car($b, $m, $c, $nod);
+	   $this->EnginePower = new Engine($power);
+    }
+
+	
+	public function getVMax(){
+		return $this->EnginePower->getHP()*2+5;
+	}
+	
+	public function getAcceleration(){
+		return $this->EnginePower->getHP()/2-5;
+	}
+	
 }
 ?>
