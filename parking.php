@@ -24,7 +24,7 @@ echo introduceCar($myCar)."\n";
 
 
 $raceCar = new RaceCar("Ferrari", "Enzo", "silver", 5, 100);
-
-echo $raceCar->getVMax()."\n";
 echo $raceCar->helloCar()."\n";
+echo "VMax is: ".$raceCar->getVMax()."\n";
+echo "Acceleration is: ".$raceCar->getAcceleration()."\n";
 ?>
