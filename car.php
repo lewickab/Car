@@ -54,12 +54,6 @@ class Car implements CarInterface{
 	}
 }
 
-function introduceCar(Car $c){
-	return "Hello! It's me - you car: ".$c->getColor(). " ".$c->getBrand()." ".$c->getModel()." ".$c->getNumberOfDoors();
-	}
-	
-	
-
 
 class RaceCar extends Car implements RaceCarInterface, EngineInterface  {
 	private $HorsePower;

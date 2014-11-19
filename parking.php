@@ -2,6 +2,10 @@
 
 include_once('car.php');
 
+function introduceCar(Car $c){
+	return "Hello! It's me - you car: ".$c->getColor(). " ".$c->getBrand()." ".$c->getModel()." ".$c->getNumberOfDoors();
+	}
+
 //$car = new Car();
 
 //echo $car->HelloCar();
